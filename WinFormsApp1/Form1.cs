@@ -17,7 +17,7 @@ namespace WinFormsApp1
         int widthofbutton = 0;
         int heightofbutton = 0;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             Button tlacitko = button1;
             Form2 form = new Form2(tlacitko);
@@ -156,6 +156,17 @@ namespace WinFormsApp1
             saveButton.Location = new Point(20, 340);
             saveButton.Click += SaveButton_Click;
             this.Controls.Add(saveButton);
+
+            Button cancelbutton = new Button();
+            cancelbutton.Text = "cancel";
+            cancelbutton.Location = new Point(20, 380);
+            cancelbutton.Click += cancelbutton_Click;
+            this.Controls.Add(cancelbutton);
+        }
+
+        private void cancelbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
